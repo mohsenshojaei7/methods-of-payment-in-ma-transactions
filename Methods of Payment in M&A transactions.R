@@ -9,13 +9,6 @@ require(stargazer)
 require(lmtest)
 require(car)
 require(vtable)      
-require(DescTools)   
-require(knitr)      
-require(tidyverse)      
-require(stargazer)      
-require(lmtest)        
-require(car)            
-require(vtable)       
 
 # Load data
 
