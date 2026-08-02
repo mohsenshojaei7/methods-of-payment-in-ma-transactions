@@ -1,14 +1,14 @@
-#   Methods of Payment in M&A       
+# Methods of Payment in M&A
 
 # Load necessary packages
 
-install.packages("DescTools")   
-install.packages("knitr")     
-install.packages("tidyverse")  
-install.packages("stargazer")   
-install.packages("lmtest")     
-install.packages("car")         
-install.packages("vtable")      
+require(DescTools)
+require(knitr)
+require(tidyverse)
+require(stargazer)
+require(lmtest)
+require(car)
+require(vtable)      
 require(DescTools)   
 require(knitr)      
 require(tidyverse)      
@@ -19,8 +19,18 @@ require(vtable)
 
 # Load data
 
-load("C:/Users/asmam/OneDrive/SEMESTER TWO/FIE401/1. Assignment One/.RData")
+# The original dataset is not included in this repository.
+data_path <- file.path("data", "CAR_MA.RData")
 
+if (!file.exists(data_path)) {
+  stop(
+    "The dataset is not included in this repository. ",
+    "Place an authorised copy of CAR_MA.RData at data/CAR_MA.RData ",
+    "to run the analysis."
+  )
+}
+
+load(data_path)
 # First look at the data
 
 summary(CAR_MA)
